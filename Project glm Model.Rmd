@@ -1,0 +1,23 @@
+---
+title: "Home Credit GLM Model"
+author: "Carson Hansen"
+date: "April 28th, 2024"
+output: 
+  html_document:
+    number_sections: yes
+    toc: yes
+editor_options: 
+  chunk_output_type: console
+---
+
+# Model 1: Logistic Regression
+
+I modeled logistic regression to help predict a categorical variable for TARGET which contains the values of 1 and 0. This can then be used on the training fold data to verify correct predictions. I initially did a logistic regression with all variables, then identified variables with a low p-value and selected those for this model.
+
+```{r, results='hide'}
+#Build a logistic regression models using varialbes with low p-values
+default_model <- app_train %>% glm(formula = TARGET ~ AMT_REQ_CREDIT_BUREAU_QRT + AMT_REQ_CREDIT_BUREAU_DAY + AMT_REQ_CREDIT_BUREAU_MON + DAYS_LAST_PHONE_CHANGE + DEF_30_CNT_SOCIAL_CIRCLE  + EXT_SOURCE_2 + EXT_SOURCE_3 + WEEKDAY_APPR_PROCESS_START + FLAG_OWN_CAR, family = "binomial")
+
+#Show the logistic regression model
+summary(default_model)
+```
