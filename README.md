@@ -4,7 +4,7 @@ This notebook is built on the problem and data of Home Credit predicting default
 
 The data used in this project is regarding an individual's characteristics; income, occupation, family size, etc. There is a train and test file with similar variables. There is also data about an individual's transactions, balances, and other financial information.
 
-Home Credit wants to help customers have a good experience by more accurately predicting who should be approved with the ability to pay back the loan and those who should be rejected who will be unable to pay it back.
+Home Credit wants to help customers have a good experience by more accurately predicting who should be approved with the ability to pay back a loan and those who should be rejected who will be unable to pay it back.
 
 Having our model provide correct predictions on an individual’s loan payment abilities will enable the following outcomes.
 •	Better allocate resources
